@@ -1,0 +1,79 @@
+body {
+    background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3B4MTM2OTgxMy1pbWFnZS1rd3Z4eHA5MS5qcGc.jpg');
+    background-size: cover;
+    /* Ensures it covers the entire screen */
+    background-position: center;
+    /* Centers the image */
+    background-attachment: fixed;
+    /* Keeps the background fixed when scrolling */
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #ffff;
+}
+
+.itemscontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box {
+    display: flex;
+    /* Use flexbox to manage content layout */
+    flex-direction: column;
+    /* Arrange content vertically */
+    justify-content: space-between;
+    /* Space between content */
+    height: 55vmin;
+    width: 58vmin;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    /* Prevents text overflow into the next box */
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    /* Ensure the image adjusts properly */
+}
+
+@media (max-width: 768px) {
+    .itemscontainer {
+        height: auto;
+        /* Allow the container to adjust height for mobile devices */
+        padding: 10px;
+        /* Add padding for a bit of space around the items */
+    }
+    .box {
+        width: 80vw;
+        /* Set width of the boxes to be responsive */
+        height: auto;
+        /* Allow height to adjust according to content */
+    }
+}
+
+
+/* You can add more breakpoints for very small devices */
+
+@media (max-width: 480px) {
+    .box {
+        width: 90vw;
+        /* Even smaller width for very small screens */
+        height: auto;
+        /* Height adjusts to content */
+    }
+}
